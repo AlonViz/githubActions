@@ -21,7 +21,6 @@ jobs:
         with:
           context: .  # Path to the Dockerfile and build context
           push: true
-          tags: |
-            alonviz/app-node:${{ github.sha }}
+          tags: alonviz/app-node:${{ github.sha}}, alonviz/app-node:latest
       - name: Logout from Docker Hub
         run: docker logout
